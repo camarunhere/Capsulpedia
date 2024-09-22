@@ -1,0 +1,30 @@
+.but_container button{
+    all: unset;
+    font: inherit;
+    font-size: smaller;
+    color: #707070;
+    cursor: pointer;
+    padding: 3px 8px;
+    border: solid 1px #707070;
+    border-radius: 8px;
+    margin: 6px;
+}
+
+.but_container .selected_button {
+    font-weight: 600;
+    color: #132d56;
+    border: solid 2px #30494c;
+    box-shadow: 1px 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.but_container .selected_dashed_button {
+    font-weight: 600;
+    color: #132d56;
+    border: dashed 2px #30494c;
+}
+
+.but_container .unselected_dashed_button {
+    color: #707070;
+    border: dashed 2px #707070;
+    border-spacing: 2px;
+}

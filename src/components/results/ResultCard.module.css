@@ -1,0 +1,153 @@
+.result_card{
+    min-height: 10rem;
+    width: 95%;
+
+    display: grid;
+    grid-template-areas: "fsp title rate";
+    grid-template-columns: 33% 34% 33%;
+    justify-content: space-between;
+
+    box-shadow: 1px 0px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(to left, #e8f2f2, #f6fafa, #ffffff, #ffffff ); 
+    /* background: linear-gradient(to left, #d0e7e7, #eaf3f2, #ffffff ); */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.left_block{
+    grid-area: fsp;
+    height: 100%;
+    width: 100%;
+    /* border: solid 1px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+.left_block .row{
+    display: flex;
+    align-items: start;
+}
+
+.row .left_block_heading{
+    display: block;
+    margin-top: 6px;
+}
+
+.row .showMoreHideBut{
+    all: unset;
+    color:#132d56;
+    display: inline;
+    cursor:pointer;
+    padding: 1px 6px;
+    font: inherit;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.center_block{
+    grid-area: title;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
+.center_block .salt_name_heading{
+    font-size: large;
+    font-weight: 600;
+}
+
+.center_block .current_combination{
+    font-size: small;
+    font-weight: 600;
+    color: #436689;
+}
+
+.right_block{
+    grid-area: rate;
+
+    height: 100%;
+    /* border: solid 1px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right_block .rate{
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.right_block .no_store_selling_box{
+    margin-left: 5.5rem;
+    /* height: 3.5rem; */
+    /* width: 12.5rem; */
+    height: fit-content;
+    width: fit-content;
+    padding: 7px;
+    border-radius: 5px;
+    border: solid 1px #afdad8;
+    color: #40565a;
+    background-color: #ffffff;
+    line-height: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_store_selling_box span{
+    width: 90%;
+    font-size: smaller;
+    color: #243d41;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width:768px) {
+    /* For tablets: */
+    .result_card{
+        width: 100%;
+
+        grid-template-areas:
+        "title title"
+        "fsp rate";
+        grid-template-columns: 50% 50%;
+    }
+    .right_block .no_store_selling_box{
+        margin-left: 0;
+        
+    }
+    .no_store_selling_box span{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    /* For mobiles: */
+    .result_card{
+        width: 95%;
+        grid-template-areas:
+        "title"
+        "fsp"
+        "rate";
+        grid-template-columns: 100%;
+        row-gap: 1rem;
+    }
+    .right_block .no_store_selling_box{
+        margin-left: 0;
+    }
+    .no_store_selling_box span{
+        width: 100%;
+    }
+}

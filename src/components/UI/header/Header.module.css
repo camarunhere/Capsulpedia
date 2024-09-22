@@ -1,0 +1,21 @@
+.search_heading{
+    text-align: center;
+    font-size: xx-large;
+    filter: drop-shadow(7px 9px 5px #6dcdcd);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For Tab */
+    .search_heading {
+        font-size: x-large;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For Mobile */
+    .search_heading {
+        font-size: large;
+        font-weight: 600;
+    }
+}
